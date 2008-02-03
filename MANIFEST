@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+examples/tail_info.pl
+t/98-pod.t
+t/99-pod-coverage.t
+t/POE-Component-WWW-PAUSE-RecentUploads-Tail.t
+lib/POE/Component/WWW/PAUSE/RecentUploads/Tail.pm
+META.yml                                 Module meta-data (added by MakeMaker)

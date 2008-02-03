@@ -4,7 +4,7 @@ use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 use Carp;
 use Storable;
@@ -30,7 +30,7 @@ sub spawn {
     unless ( $params{store} ) {
         warn "Missing `store` parameter\n"
             if $params{debug};
-        $params{store} = '';
+        $params{store} = 'pause_recent.data';
     }
     
     unless ( $params{ua_args} ) {
@@ -388,7 +388,7 @@ B<Mandatory>. Must contain your L<http://pause.perl.org> password.
     { store => '/tmp/storage_file.data' }
 
 B<Optional>. Specifies the filename of the file where we are going to
-store the already reported modules. Defaults to: C<pause_recent.data> in
+store the already reported modules. B<Defaults to:> C<pause_recent.data> in
 the current directory.
 
 =head2 alias
@@ -409,7 +409,7 @@ Enables output of some debug messages (usually not very useful).
     { debug   => 1 }
 
 B<Optional>. When set to a true value will make the component emit some
-debuging info. Defaults to false.
+debuging info. B<Defaults to:> C<0>.
 
 =head2 options
 
@@ -511,7 +511,8 @@ See OUTPUT section for its format.
 
 B<Optional>. Specifies the interval in I<seconds> between requests to
 PAUSE for fresh list. If specified to C<0> will make the component only
-fire a single shot request without setting any interval.
+fire a single shot request without setting any interval. B<Defaults to:>
+C<1800> (30 minutes)
 
 =head3 session
 
@@ -522,8 +523,8 @@ fire a single shot request without setting any interval.
     { session => $other_session_ref }
 
 B<Optional>. Specifies an alternative POE Session to send the output to.
-Accepts either session alias, session ID or session reference. Defaults
-to the current session.
+Accepts either session alias, session ID or session reference. B<Defaults
+to> the current session.
 
 =head3 login
 
@@ -531,7 +532,7 @@ to the current session.
 
 B<Optional>.Using C<login> argument you may override the PAUSE login 
 you've specified
-in the constructor. Defaults to contructor's C<login> value.
+in the constructor. B<Defaults to:> contructor's C<login> value.
 
 =head3 pass
 
@@ -539,7 +540,7 @@ in the constructor. Defaults to contructor's C<login> value.
 
 B<Optional>. Using C<pass> argument you may override the PAUSE 
 password you've specified
-in the constructor. Defaults to contructor's C<pass> value.
+in the constructor. B<Defaults to:> contructor's C<pass> value.
 
 =head3 ua_args
 
@@ -554,7 +555,7 @@ in the constructor. Defaults to contructor's C<pass> value.
 B<Optional>. The C<ua_args> key takes a hashref as a value which should
 contain the arguments which will
 be passed to
-L<LWP::UserAgent> contructor. I<Note:> all arguments will default to
+L<LWP::UserAgent> contructor. I<Note:> all arguments will B<default to>
 whatever L<LWP::UserAgent> default contructor arguments are except for
 the C<timeout>, which will default to 30 seconds.
 

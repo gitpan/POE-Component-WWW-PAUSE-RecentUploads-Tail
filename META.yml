@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                POE-Component-WWW-PAUSE-RecentUploads-Tail
-version:             0.01
+version:             0.03
 abstract:            tail recent uploads
 license:             ~
 author:              

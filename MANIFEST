@@ -1,10 +1,12 @@
+Build.PL
 Changes
-Makefile.PL
 MANIFEST
 README
-examples/tail_info.pl
-t/98-pod.t
-t/99-pod-coverage.t
-t/POE-Component-WWW-PAUSE-RecentUploads-Tail.t
 lib/POE/Component/WWW/PAUSE/RecentUploads/Tail.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
+t/kwalitee.t
+examples/get_recent.pl
+Makefile.PL
+META.yml

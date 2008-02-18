@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -45,12 +45,12 @@ sub recent {
         print "Failed on this itteration with $data_ref->{error}\n";
     }
     else {
-        my $message = @{ $data_ref->{data} }
+        my $message = @{ $data_ref->{data} || [] }
                     ? "\nNew uploads at $iter_time\n"
                     : "\nNo uploads at $iter_time\n";
         print $message;
         
-        foreach my $dist ( @{ $data_ref->{data} } ) {
+        foreach my $dist ( @{ $data_ref->{data} || [] } ) {
             printf "%s by %s (size: %s)\n",
                 @$dist{ qw( dist name size ) };
         }

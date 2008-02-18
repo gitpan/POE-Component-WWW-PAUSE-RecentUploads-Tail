@@ -1,15 +1,16 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl POE-Component-WWW-PAUSE-RecentUploads-Tail.t'
-
-
-use Test::More tests => 9;
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
 
+use Test::More tests => 10;
+
+diag( "Testing POE::Component::WWW::PAUSE::RecentUploads::Tail $POE::Component::WWW::PAUSE::RecentUploads::Tail::VERSION, Perl $], $^X" );
+
 BEGIN {
     use_ok('Carp');
     use_ok('POE');
+    use_ok('Storable');
     use_ok('POE::Wheel::Run');
     use_ok('POE::Filter::Line');
     use_ok('POE::Filter::Reference');

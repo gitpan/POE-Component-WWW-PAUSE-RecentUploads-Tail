@@ -1,5 +1,8 @@
 Revision history for POE-Component-WWW-PAUSE-RecentUploads-Tail
 
+0.02    Mar 17, 2008
+        changed prereqs to reflect version with bug fixes
+
 0.01    Date/time
         First version, released on an unsuspecting world.
 

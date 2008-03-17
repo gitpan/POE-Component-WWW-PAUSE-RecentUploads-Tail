@@ -10,7 +10,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'Storable' => '2.15',
-                           'POE::Component::WWW::PAUSE::RecentUploads' => '0.02',
+                           'POE::Component::WWW::PAUSE::RecentUploads' => '0.03',
                            'POE' => '0.9999',
                            'Carp' => '1.04'
                          }

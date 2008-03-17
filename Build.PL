@@ -14,7 +14,7 @@ my $builder = Module::Build->new(
         'Carp'                                      => 1.04,
         'Storable'                                  => 2.15,
         'POE'                                       => 0.9999,
-        'POE::Component::WWW::PAUSE::RecentUploads' => 0.02,
+        'POE::Component::WWW::PAUSE::RecentUploads' => 0.03,
     },
     add_to_cleanup      => [ 'POE-Component-WWW-PAUSE-RecentUploads-Tail-*' ],
     create_makefile_pl => 'traditional',
